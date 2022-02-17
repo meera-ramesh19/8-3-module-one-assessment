@@ -220,7 +220,7 @@ function getBiggestBoxOfficeMovie(movies) {
   let movieName=''
   let boxOfficeEarnings=0
   for (let movie of movies) {
-    let moneyMovieMade = Number(movie.boxOffice.slice(1).replaceAll(',',''))
+    let moneyMovieMade = Number(movie.boxOffice.slice(1).split(',').join(''))
      if (moneyMovieMade > boxOfficeEarnings ) {
        boxOfficeEarnings = moneyMovieMade
        movieName = movie.title
